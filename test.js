@@ -1,32 +1,4 @@
-    var valA = document.getElementById("valA");
-    valA.onclick = function () {
-    testOperation();
-};
-    var valOl = document.getElementById("valOl");
-    valOl.onclick = function () {
-    testOperation();
-};
-    var valMeta = document.getElementById("valMeta");
-    valMeta.onclick = function () {
-    testOperation();
-};
-    var valTd = document.getElementById("valTd");
-    valTd.onclick = function () {
-    testOperation();
-};
-    var valCaption = document.getElementById("valCaption");
-    valCaption.onclick = function () {
-    testOperation();
-};
-    var valAutocomplete = document.getElementById("valAutocomplete");
-    valAutocomplete.onclick = function () {
-    testOperation();
-};
-    var valAction = document.getElementById("valAction");
-    valAction.onclick = function () {
-    testOperation();
-};
-   var result = document.getElementById("result");
+var result = document.getElementById("result");
 result.onclick = function testOperation(){
      var res;
      var i = 0;

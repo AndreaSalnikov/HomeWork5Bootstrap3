@@ -105,7 +105,7 @@ function operation (op) {
          memoryCurrentNumber = localOperationMemory;
       }
    if( memoryCurrentNumber == Infinity ){
-      memoryCurrentNumber = 0;
+      memoryCurrentNumber = "Деление на ноль невозможно";
       };    
       display.value = memoryCurrentNumber;
       memoryPendingOperation = op;
