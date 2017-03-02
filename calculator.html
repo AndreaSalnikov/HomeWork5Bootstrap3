@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <title>Калькулятор</title>
+      <meta charset="utf-8"/>
+      <link rel="stylesheet" href="style.css"/>
+         </head>
+   <body>
+      <header>
+         <a id="logo" href="index.html"><img src="webLogo.png" alt="image" height="100"/></a>
+         <h1 class="fweight">Основы Web-технологий</h1>
+         <nav>
+            <ul class="main-menu">
+               <li><a href="index.html" type="text/html">Главная</a></li>
+               <li><a href="technologies.html" type="text/html">Web-технологии</a>
+                  <ul class="sub-menu">
+                     <li><a href="html5.html" type="text/html">HTML5</a></li>
+                     <li><a href="css3.html" type="text/html">CSS3</a></li>
+                     <li><a href="javaScript.html" type="text/html">JavaScript</a></li>
+                  </ul>
+               </li>   
+               <li><a href="calculator.html" type="text/html">Калькулятор</a></li>
+               <li><a href="test.html" type="text/html">Тест</a></li>
+            </ul>
+         </nav>
+      </header>
+      <main>
+         <form name="calculator">
+         <table>
+            <tr>
+               <td colspan="5"><input disabled id="display" class="display" name="display" type="text"
+              	size="28"></td>
+            </tr>
+               <tr>                 
+                  <td><button id="but7" type="button" name="seven" value="7">7</button></td>               
+                  <td><button id="but8" type="button" name="eight" value="8">8</button></td> 
+                  <td><button id="but9" type="button" name="nine" value="9">9</button></td> 
+                  <td><button id="divide" class="operation" type="button" name="div"  value="/">/</button></td> 
+                  <td><button id="clearDisplay" type="button" name="clear" value="c">c</button></td> 
+               </tr>
+               <tr>                                 
+                  <td><button id="but4" type="button" name="four" value="4">4</button></td>
+                  <td><button id="but5" type="button" name="five" value="5">5</button></td>
+                  <td><button id="but6" type="button" name="six" value="6">6</button></td>
+                  <td><button id="multiply" class="operation" type="button" name="mul" value="*">*</button></td>
+                  <td><button id="plusMinus" type="button" name="plus/minus" value="&#177;">&#177;</button></td>                  
+               </tr>
+               <tr>                                 
+                  <td><button id="but1" class="float" type="button" name="one" value="1">1</button></td>
+                  <td><button id="but2" class="float" type="button" name="two" value="2">2</button></td>
+                  <td><button id="but3" class="float" type="button" name="three" value="3">3</button></td>
+                  <td><button id="minus" class="operation float" type="button" name="sub" value="-">-</button></td>
+                  <td rowspan="2" ><button id="rowspan" class="operation" type="button" name="doit" value="=">=</button></td>            
+               </tr>
+               <tr>
+                  <td colspan="2"><button id="but0" class="float" type="button" name="zero" value="0">0</button></td>
+                  <td><button id="insertDecimal" class="float" type="button" name="insertDecimal" value=".">.</button></td>
+                  <td><button id="plus" class="operation float" type="button" name="add" value="+">+</button></td>
+               </tr>
+         </table>
+         </form> 
+         <script src="calculator.js"></script>
+      </main>
+      <footer>
+         <address>
+            <a href="#"><div id="italic" class="center" >Пишите: mail@mail</div></a>
+         </address>
+               <div class="center">&#169; Фамилия И.О., год</div>        
+      </footer>
+   </body>
+</html>
