@@ -1,24 +1,23 @@
-var result = document.getElementById("result");
-result.onclick = function testOperation(){
+$("#result").click(function(){
      var res;
      var i = 0;
-   if( valA.checked ) {
+   if( $("#valA").prop("checked") ) {
      i++;
      res = i;
    }
-   if( valOl.checked ) {
+   if( $("#valOl").prop("checked") ) {
     i++;
     res = i;
    }
-   if( valMeta.checked ) {
+   if( $("#valMeta").prop("checked") ) {
     i++;
     res = i;
    }
-    if( valBodyt.checked == false && valTd.checked == true && valCaption.checked == true && valColumn.checked == false ) {
+    if( $("#valBodyt").prop("checked") == false && $("#valTd").prop("checked") == true && $("#valCaption").prop("checked") == true && $("#valColumn").prop("checked") == false ) {
      i++;
      res = i;
    }
-   if( valCharset.checked == false && valAutocomplete.checked == true && valAction.checked == true && valValidate.checked == false ) {
+   if( $("#valCharset").prop("checked") == false && $("#valAutocomplete").prop("checked") == true && $("#valAction").prop("checked") == true && $("#valValidate").prop("checked") == false ) {
      i++;
      res = i;  
    }
@@ -29,4 +28,4 @@ result.onclick = function testOperation(){
    if( res == 5 ) {
    alert("ПОЗДРАВЛЯЕМ!!!=)"); 
    }
-};
+})
