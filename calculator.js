@@ -1,12 +1,14 @@
 function addNumber(number) {
    if(memoryNewNumber){
-      display.value = number;
+      $(":text").val(number);
       memoryNewNumber = false;
    }else{
-      if(display.value === "0" ) {
-         display.value = number;
+      if($(":text").val() === "0") {
+         $(":text").val(number);
       }else{
-         display.value += number;
+         var dispVal = $(":text").val();
+             dispVal += number;
+             $(":text").val(dispVal);
       };
    };
 };
@@ -41,15 +43,18 @@ $("button").eq(2).bind("click", function () {
    addNumber(9);
 });
 $("button").eq(4).bind("click", function () {
-    display.value = '0';
+    $(":text").val("0");
 });
-
-$("button").eq(16).bind("click", function () {    
-    if (display.value.indexOf('.') === -1) 
-       display.value += '.';
+$("button").eq(16).bind("click", function () {
+   var dispVal = $(":text").val();   
+   if (dispVal.indexOf('.') === -1) 
+   dispVal += '.';
+   $(":text").val(dispVal);
 });
 $("button").eq(9).bind("click", function () {
-   display.value = display.value * (-1);
+   var dispVal = $(":text").val();
+   var result = dispVal * (-1);
+   $(":text").val(result);
 });
 $(".operation").click(function(e) {
    operation(e.target.textContent);
@@ -58,9 +63,9 @@ var memoryCurrentNumber = 0;
 var memoryNewNumber = false;
 var memoryPendingOperation = "";
 function operation (op) {
-   var localOperationMemory = display.value;
+   var localOperationMemory = $(":text").val();
    if(memoryNewNumber && memoryPendingOperation !== "="){
-      display.value = memoryCurrentNumber;
+      $(":text").val(memoryCurrentNumber);
    }else{
       memoryNewNumber = true;
       if(memoryPendingOperation === "+"){
@@ -74,10 +79,10 @@ function operation (op) {
       } else {
          memoryCurrentNumber = localOperationMemory;
       }
-   if( memoryCurrentNumber == Infinity ){
-      memoryCurrentNumber = "Деление на ноль невозможно";
-      };    
-      display.value = memoryCurrentNumber;
+      if( $(":text").val() == Infinity ){
+         $(":text").val() = "Деление на ноль невозможно";
+      }
+      $(":text").val(memoryCurrentNumber);
       memoryPendingOperation = op;
    };
 };
